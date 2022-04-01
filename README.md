@@ -1,5 +1,5 @@
 # waiting-list-projections
-trust and specialty projections of waiting lists, for all trusts in england, updated each month
+trust and specialty projections of waiting lists, for all trusts in england, updated each month with latest data
 
 latest calculation data (calc-dat.zip) and projections (results directory) are based on data up to end january 2022
 
