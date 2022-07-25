@@ -184,6 +184,7 @@ rtt_dat_trust<-read.csv("calc-dat.csv") %>%
   mutate(prop_clock_stops_reneges=reneges/(reneges+treatments)) %>%
   pivot_longer(cols=-c(provider,specialty,date),names_to="metric",values_to="value") %>%
   mutate(value=case_when(metric=="W"~value,
+                         metric=="prop_clock_stops_reneges"~value,
                          metric=="mean_treatment_wait"~value*7,
                          TRUE~value/lubridate::days_in_month(date))) %>%
   mutate(date=as.Date(date)) %>%
