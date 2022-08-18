@@ -80,7 +80,8 @@ plot_res2<-function(dat) {
     geom_line(aes(y=hist_avg),colour="grey",linetype="dashed") +
     geom_line(aes(y=proj,colour=`Annual referral growth`,linetype=`Annual capacity growth`)) +
     geom_line(aes(y=actual)) +
-    scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
+    scale_color_manual(values=c("green2", "orange", "red2")) +
+    #scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
     scale_y_continuous(labels=comma) +
     labs(title=paste0(tprovider," - ",tspecialty),
          subtitle=paste0("Projections based on actual data for referrals and treatments over the last ",months_to_calibrate_from," months to end ",as.yearmon(max(rtt_dat_trust$date))),
@@ -115,7 +116,8 @@ plot2_res2<-function(dat,metric1) {
     geom_line(aes(y=hist_avg),colour="grey",linetype="dashed") +
     geom_line(aes(y=proj,colour=`Annual referral growth`,linetype=`Annual capacity growth`)) +
     geom_line(aes(y=actual)) +
-    scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
+    scale_color_manual(values=c("green2", "orange", "red2")) +
+    #scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
     scale_y_continuous(labels=comma) +
     labs(title=paste0(tprovider," - ",metric1),
          subtitle=paste0("Projections based on actual data for referrals and treatments over the last ",months_to_calibrate_from," months to end ",as.yearmon(max(rtt_dat_trust$date))," (shaded grey area)"),
