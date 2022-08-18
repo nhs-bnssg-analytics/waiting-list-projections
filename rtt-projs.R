@@ -80,7 +80,7 @@ plot_res2<-function(dat) {
     geom_line(aes(y=hist_avg),colour="grey",linetype="dashed") +
     geom_line(aes(y=proj,colour=`Annual referral growth`,linetype=`Annual capacity growth`)) +
     geom_line(aes(y=actual)) +
-    scale_color_manual(values=c("green2", "orange", "red2")) +
+    scale_color_manual(values=c("green3", "orange", "red2")) +
     #scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
     scale_y_continuous(labels=comma) +
     labs(title=paste0(tprovider," - ",tspecialty),
@@ -116,7 +116,7 @@ plot2_res2<-function(dat,metric1) {
     geom_line(aes(y=hist_avg),colour="grey",linetype="dashed") +
     geom_line(aes(y=proj,colour=`Annual referral growth`,linetype=`Annual capacity growth`)) +
     geom_line(aes(y=actual)) +
-    scale_color_manual(values=c("green2", "orange", "red2")) +
+    scale_color_manual(values=c("green3", "orange", "red2")) +
     #scale_colour_viridis_d(direction=-1,begin=0.2,end=0.8,option="rocket") +
     scale_y_continuous(labels=comma) +
     labs(title=paste0(tprovider," - ",metric1),
